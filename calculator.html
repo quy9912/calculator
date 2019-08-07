@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text" id="s">
+    <div>
+        <button type="button" class="c" value="7"  onclick="calculator(this.value)">7</button>
+        <button type="button" class="c"  value="8" onclick="calculator(this.value)">8</button>
+        <button type="button" class="c" value="9" onclick="calculator(this.value)">9</button>
+        <button type="button" class="c" value="/" onclick="calculator(this.value)">/</button>
+    </div>
+
+    <div>
+        <button type="button" class="c" value="4" onclick="calculator(this.value)">4</button>
+        <button type="button" class="c" value="5" onclick="calculator(this.value)">5</button>
+        <button type="button" class="c" value="6" onclick="calculator(this.value)">6</button>
+        <button type="button" class="c" value="*" onclick="calculator(this.value)">x</button>
+    </div>
+    <div>
+        <button type="button" class="c" value="1" onclick="calculator(this.value)">1</button>
+        <button type="button" class="c" value="2" onclick="calculator(this.value)">2</button>
+        <button type="button" class="c" value="3" onclick="calculator(this.value)">3</button>
+        <button type="button" class="c" value="-" onclick="calculator(this.value)">-</button>
+    </div>
+
+    <div>
+        <button type="button" class="c" value="0" onclick="calculator(this.value)">0</button>
+        <button type="button" class="c" value="=" onclick="res()">=</button>
+        <button type="button" class="c" value="Del" onclick="calcu()">C</button>
+        <button type="button" class="c" value="+" onclick="calculator(this.value)">+</button>
+    </div>
+<script>
+    function calculator(number) {
+        document.getElementById('s').value += number;
+    }
+    function res() {
+        let a = document.getElementById('s').value;
+        let ress = eval(a);
+        document.getElementById('s').value = ress;
+    }
+    function calcu() {
+        document.getElementById('s').value='';
+    }
+</script>
+</body>
+</html>
